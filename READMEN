@@ -1,0 +1,52 @@
+# README DE CorPosCor
+
+## Instalación de Programas necesarios:
+- Python.
+- opencv-contrib-python==4.5.3.56
+- opencv-python==4.5.3.56
+- mediapipe.
+- pyttsx3.
+- win10toast.
+- tk.
+
+Para instalar las librerias correr el comando .
+```
+pip install -r requirements.txt
+```
+
+## Archivos:
+- postura : ambiente virtual.
+- haarcascade_frontalface_default : archivo para detectar rostros de manera frontal. 
+- notificacion.py
+- corpus.py : archivo base de pose estimation.
+- gui.py : interfaz grafica y archivo PRINCIPAL.
+
+## Variables del entorno:
+- UMBRAL : (int) Es el maximo valor de diferencia de alturas permitido entre el hombro derecho y el hombro izquierdo.
+- UMBRAL2 : (int) Es el maximo valor de diferencia de alturas permitido entre el ojo derecho y el ojo izquierdo.
+- MENSAJE1 : (string) Mensaje a mostrar cuando no se este detectando al usuario en la camara.
+- MENSAJE2 : (string) Es el mensaje a mostrar cuando el usuario este adoptando una mala postura.
+
+## Librerias usadas:
+- OpenCV : librería para procesamiento de imagenes y video.
+- MediaPipe : Librería OpenSource para soluciones de ML para entornos Multi Media.
+    - detecta 33 puntos de referencia para la pose humana.
+![Alt text](/imagenes/33_puntos_referencia.jpeg)
+- Tkinter : librería para realizar interfaz grafica.
+
+## Instrucciones de uso:
+- para correr el programa principal:
+    - Entrar a la termimal ubicada en la carpeta del proyecto y escribir el comando:
+        ```
+        python gui.py 
+        ```
+    - Dar doble click sobre el archivo.
+- La aplicación brinda dos opciones:
+    - Notificación silenciosa.
+    - Ver mascara de estimación de puntos.
+- Para iniciar el analisís del posición dar click sobre el boton de "Comenzar analisis de postura".
+- para salir del programa dar click sobre el boton de "Exit Program".
+
+![Alt text](/imagenes/main_window.PNG)
+
+- Para cerrar la ventana de analisís de postura, presionar la tecla "esc".
